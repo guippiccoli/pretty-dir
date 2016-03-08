@@ -1,7 +1,7 @@
 {
   "name": "pretty-dir",
   "main": "./lib/pretty-dir",
-  "version": "0.0.15",
+  "version": "0.0.16",
   "description": "Flat colors for tree view directorys",
   "keywords": [
     "ui",

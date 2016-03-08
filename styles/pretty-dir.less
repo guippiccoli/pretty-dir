@@ -1,0 +1,49 @@
+// The ui-variables file is provided by base themes provided by Atom.
+//
+// See https://github.com/atom/atom-dark-ui/blob/master/styles/ui-variables.less
+// for a full listing of what's available.
+@import "ui-variables";
+
+.pretty-dir {
+
+	@colors:
+	rgba(26, 188, 156, 0.1) rgba(26, 188, 156, 0.2),
+	rgba(231, 76, 60,  0.1) rgba(231, 76, 60,  0.2),
+	rgba(52, 152, 219, 0.1) rgba(52, 152, 219, 0.2),
+	rgba(241, 196, 15, 0.1) rgba(241, 196, 15, 0.2),
+	rgba(155, 89, 182, 0.1) rgba(155, 89, 182, 0.2),
+	rgba(230, 126, 34, 0.1) rgba(230, 126, 34, 0.2),
+	rgba(236, 240, 241,0.1) rgba(236, 240, 241,0.2),
+
+	rgba(26, 188, 156, 0.1) rgba(26, 188, 156, 0.2),
+	rgba(231, 76, 60,  0.1) rgba(231, 76, 60,  0.2),
+	rgba(52, 152, 219, 0.1) rgba(52, 152, 219, 0.2),
+	rgba(241, 196, 15, 0.1) rgba(241, 196, 15, 0.2),
+	rgba(155, 89, 182, 0.1) rgba(155, 89, 182, 0.2),
+	rgba(230, 126, 34, 0.1) rgba(230, 126, 34, 0.2),
+	rgba(236, 240, 241,0.1) rgba(236, 240, 241,0.2),
+
+	rgba(26, 188, 156, 0.1) rgba(26, 188, 156, 0.2),
+	rgba(231, 76, 60,  0.1) rgba(231, 76, 60,  0.2),
+	rgba(52, 152, 219, 0.1) rgba(52, 152, 219, 0.2),
+	rgba(241, 196, 15, 0.1) rgba(241, 196, 15, 0.2),
+	rgba(155, 89, 182, 0.1) rgba(155, 89, 182, 0.2),
+	rgba(230, 126, 34, 0.1) rgba(230, 126, 34, 0.2),
+	rgba(236, 240, 241,0.1) rgba(236, 240, 241,0.2);
+
+	.make-color-classes(@i: length(@colors)) when (@i > 0) {
+		.make-color-classes(@i - 1);
+		@color_1: extract(extract(@colors, @i), 1);
+		@color_2: extract(extract(@colors, @i), 2);
+		ol.tree-view > li:nth-child(@{i}),
+		ol.tree-view > li:nth-child(@{i}):before {
+			background-color:@color_1;
+			border-left:solid 1px @color_1;
+		}
+		ol.tree-view > li:nth-child(@{i}) li:before {
+			background-color:@color_2;
+		}
+	}
+	.make-color-classes();
+
+}

@@ -1,0 +1,18 @@
+{
+  "name": "pretty-dir",
+  "main": "./lib/pretty-dir",
+  "version": "0.0.1",
+  "description": "Flat colors for tree view directorys",
+  "keywords": [
+  ],
+  "activationCommands": {
+    "atom-workspace": "pretty-dir:toggle"
+  },
+  "repository": "",
+  "license": "MIT",
+  "engines": {
+    "atom": ">=1.0.0 <2.0.0"
+  },
+  "dependencies": {
+  }
+}
